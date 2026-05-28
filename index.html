@@ -73,7 +73,11 @@
         Obrigado por fazerem parte da nossa história e por viverem esse sonho conosco.
       </p>
 
-      <img class="story__banner" src="img/foto-ensaio.jpg" alt="Foto do ensaio do casal" />
+      <div class="photo-grid">
+        <img src="img/foto-ensaio.jpg" alt="Foto do ensaio do casal" />
+        <img src="img/ensaio1.jpeg" alt="Foto do ensaio do casal na natureza" />
+        <img src="img/ensaio2.jpeg" alt="Foto do ensaio do casal" />
+      </div>
 
       <a class="backtop" href="#inicio">VOLTAR AO TOPO</a>
     </div>
@@ -89,7 +93,7 @@
       <div class="divider"></div>
 
       <div class="place-card">
-        <img class="place-card__img" src="img/foto-ensaio.jpg" alt="Laina e Adonai" />
+        <img class="place-card__img" src="img/ensaio1.jpeg" alt="Laina e Adonai" />
         <div class="place-card__body">
           <h3>CASARÃO BURITI ALEGRE BY CATARINA VELOSO EVENTOS</h3>
           <p class="place-card__meta">14 de Junho de 2026 • 15:00</p>
@@ -112,7 +116,7 @@
 
   <section id="presentes" class="gifts">
     <div class="gifts__inner">
-      <h2 class="section-title">LISTA DE CASAMENTO VIRTUAL</h2>
+      <h2 class="section-title">LISTA DE PRESENTES DO CASAMENTO</h2>
       <p class="gifts__text">
         QUERIDOS FAMILIARES E AMIGOS, PARA NÓS, A PRESENÇA DE VOCÊS NESTE DIA TÃO ESPECIAL É O MAIOR PRESENTE QUE PODERÍAMOS
         RECEBER. MAS, SE VOCÊS TAMBÉM QUISEREM NOS PRESENTEAR, FICAREMOS MUITO AGRADECIDOS.
@@ -123,28 +127,45 @@
       <details class="gift-item" open>
         <summary>Presentes (clique para recolher/abrir)</summary>
         <ul class="gift-list">
-          <li>Jogo de panela (indução)</li>
-          <li>Panela de pressão elétrica</li>
-          <li>Panela de arroz</li>
-          <li>Cafeteira — preta ou cinza</li>
-          <li>Jogo de suplat 12 peças (verde)</li>
-          <li>Jogo americano 12 peças</li>
-          <li>Jogo de taças 12 peças (verde)</li>
-          <li>Jogo de taças 12 peças (vinho)</li>
-          <li>Jogo de cama queen — branco/cinza</li>
-          <li>Toalha de banho — branca/cinza</li>
-          <li>Lençol de elástico — branco/cinza/verde claro</li>
-          <li>Toalha de rosto — branca/cinza</li>
-          <li>Tapete banheiro — cinza/branco</li>
-          <li>Edredom — cama queen</li>
-          <li>Jogo de talheres</li>
-          <li>Jarra de vidro</li>
-          <li>Liquidificador</li>
-          <li>Jogo de xícara</li>
-          <li>Aparelho de jantar</li>
-          <li>Air Fryer</li>
+          <li>Jogo de panela (indução) — cores neutras.</li>
+          <li>Jogo de cama Queen branco ou cinza, fios penteados.</li>
+          <li>Aparelho de jantar clássico — dica: pratos brancos ou em tons de areia/cru, com formatos fluidos ou filetes discretos.</li>
+          <li>Jogo de xícaras clássicas.</li>
+          <li>Jogo de talheres — dica: talheres de linhas retas e minimalistas.</li>
+          <li>Jogo de taças — 12 peças (verde).</li>
+          <li>Jogo de taças — 12 peças (vinho/bordô).</li>
+          <li>Jarra de vidro — dica: vidro borossilicato com tampa de bambu ou inox.</li>
+          <li>Jogo de sousplat — 12 peças (verde).</li>
+          <li>Jogo americano — 12 peças.</li>
+          <li>Petisqueiras ou bowls em cerâmica artesanal.</li>
+          <li>Faqueiro de sobremesa/bolo com design minimalista.</li>
+          <li>Argolas para guardanapo — em metal escovado, dourado fosco ou madeira.</li>
+          <li>Boleira de vidro Home Special.</li>
+          <li>Panela de pressão (indução) — cores clássicas.</li>
         </ul>
       </details>
+
+      <div class="gift-info">
+        <h3>PIX para presente</h3>
+        <p>Se preferir contribuir com um valor em vez de comprar um item, use o PIX:</p>
+        <div class="pix-box">
+          <span class="pix" id="pix-number">(61) 98190-2998</span>
+          <button class="copy-btn" type="button" onclick="copiarPix()">COPIAR PIX</button>
+        </div>
+        <p id="copiado-msg" class="copiado-msg"></p>
+      </div>
+
+      <div class="gift-info">
+        <h3>Endereço para entrega de presentes</h3>
+        <p>
+          CSG 3, Lote 07 - Taguatinga Sul, Brasília - DF<br>
+          CEP 72035-503<br>
+          Tagua Life, bloco E, Apartamento 616
+        </p>
+        <a class="btn-route" href="https://maps.app.goo.gl/jTnDAd3XTAdk2HQP7" target="_blank" rel="noreferrer">
+          VER ENDEREÇO NO GOOGLE MAPS
+        </a>
+      </div>
 
       <p class="signature">Com amor, Laina &amp; Adonai.</p>
     </div>
@@ -157,5 +178,19 @@
   </footer>
 
   <script src="js/countdown.js"></script>
+
+  <script>
+    function copiarPix() {
+      const pix = "(61) 98190-2998";
+      navigator.clipboard.writeText(pix).then(() => {
+        const msg = document.getElementById("copiado-msg");
+        msg.innerText = "✅ PIX copiado!";
+        setTimeout(() => {
+          msg.innerText = "";
+        }, 3000);
+      });
+    }
+  </script>
+
 </body>
 </html>
